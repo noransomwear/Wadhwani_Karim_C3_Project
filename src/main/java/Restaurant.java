@@ -65,4 +65,13 @@ public class Restaurant {
     public Object calculateTotalOrderValue(List<String> cart) {
         return 0;
     }
+    public int getTotalOfSelectedItems(List<String> itemList) {
+        int total = 0;
+        for (String itemName : itemList) {
+            Item item = findItemByName(itemName);
+            if(null != item)
+                total += item.getPrice();
+        }
+        return total;
+    }
 }
