@@ -62,4 +62,7 @@ public class Restaurant {
         return name;
     }
 
+    public Object calculateTotalOrderValue(List<String> cart) {
+        return 0;
+    }
 }
